@@ -12,7 +12,7 @@ services:
       - .env.sample
 
   db:
-    image: postgres:latest
+    image: postgres:16.3
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
