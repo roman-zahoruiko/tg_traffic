@@ -9,7 +9,6 @@ Traffic Devils test task
 ## Prerequisites
 
 - Docker & Docker Compose: [Install Docker](https://docs.docker.com/get-docker/)
-- Database included to repo to simplify testing (db_data folder)
 
 # Test users:
 
@@ -33,7 +32,12 @@ cd tg_traffic-roman-zahoruiko
 ```bash
 docker-compose up --build
 ```
-3. Access the Application
+3. Restore Database from SQL Dump:
+```bash
+docker compose cp tg_traffic.sql db:/tg_traffic.sql
+docker compose exec -it db pg_restore -U postgres -d tg_traffic /tg_traffic.sql
+```
+4. Access the Application
 
 - The **FastAPI** application will be available at http://localhost:8005/docs.
 - The **PostgreSQL** database will be accessible on localhost:5435.

@@ -12,9 +12,7 @@ services:
       - .env.sample
 
   db:
-    image: postgres:15
-    volumes:
-      - ./db_data:/var/lib/postgresql/data
+    image: postgres:latest
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASS}
