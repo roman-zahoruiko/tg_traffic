@@ -30,7 +30,7 @@ cd tg_traffic-roman-zahoruiko
 ```
 2. Build and Run the Application
 ```bash
-docker-compose up --build
+docker-compose up -d --build
 ```
 3. Restore Database from SQL Dump:
 ```bash
