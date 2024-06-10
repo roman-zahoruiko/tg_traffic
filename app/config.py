@@ -1,7 +1,7 @@
 import os
 
 # from dotenv import load_dotenv
-# load_dotenv()
+# load_dotenv(dotenv_path='../.env')
 
 DB_HOST = os.environ.get('DB_HOST')
 DB_PORT = os.environ.get('DB_PORT')
